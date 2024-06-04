@@ -76,26 +76,26 @@ $ mkdir san-lorenzo-dir
 ```
 
 #### rm
-**Descripción**: borra el archivo o directorio que recibe como parámetro. Si el directorio contiene archivos, deberá usar la opción --recursive para borrar todo recursivamente.
-Si no se usa la opción --recursive y el directorio contiene archivos, entonces deberá devolver un mensaje de error.
+**Descripción**: borra el archivo o directorio que recibe como parámetro. Deberá usar la opción --recursive para borrar directorios.
+Si no se usa la opción --recursive y si quiere borrar un directorio entonces deberá devolver un mensaje de error.
 
 **Parámetros**: el nombre del archivo o directorio a borrar.
 
 **Opciones**:
 - "--recursive": borra recursivamente todo el árbol de archivos. No recibe argumentos.
 
-**Output**: tendrá que devolver un mensaje con el formato "'%1' '%2' removed" donde %1 es el nombre del archivo o directorio que se borró y %2 es _file_ o _directory_.
+**Output**: tendrá que devolver un mensaje con el formato "'%1' removed" donde %1 es el nombre del archivo o directorio que se borró.
 
 **Ejemplos**
 ```bash
 $ rm san-lorenzo-dir
-'san-lorenzo-dir' directory removed
+'san-lorenzo-dir' removed
 
 $ rm ciclon.txt
-'ciclon.txt' file removed
+'ciclon.txt' removed
 
 $ rm --recursive san-lorenzo-dir
-'san-lorenzo-dir' directory removed
+'san-lorenzo-dir' removed
 ```
 
 #### pwd
