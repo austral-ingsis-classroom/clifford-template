@@ -43,7 +43,7 @@ public class FileSystemTests {
             entry("cd emily", "moved to directory 'emily'"),
             entry("pwd", "/emily"),
             entry("touch elizabeth.txt", "'elizabeth.txt' file created"),
-            entry("mkdir t-bone", "'t-bone' directory"),
+            entry("mkdir t-bone", "'t-bone' directory created"),
             entry("ls", "elizabeth t-bone")
     ));
   }
