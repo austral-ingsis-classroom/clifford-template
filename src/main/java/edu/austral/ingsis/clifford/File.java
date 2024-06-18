@@ -14,4 +14,9 @@ public class File implements Node {
     public String getName() {
         return name;
     }
+
+    @Override
+    public Directory getParent() {
+       return parent;
+    }
 }

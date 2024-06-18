@@ -26,6 +26,11 @@ public class Directory implements Node {
         return name;
     }
 
+    @Override
+    public Directory getParent() {
+       return parent;
+    }
+
     public List<Node> getChildren() {
         return children;
     }
