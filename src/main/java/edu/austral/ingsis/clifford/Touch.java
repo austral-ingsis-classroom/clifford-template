@@ -1,17 +1,17 @@
 package edu.austral.ingsis.clifford;
 
 public class Touch implements Command {
-    final private FileSystem fileSystem;
-    final private String name;
+  private final FileSystem fileSystem;
+  private final String name;
 
-    public Touch(FileSystem fileSystem, String name) {
-        this.fileSystem = fileSystem;
-        this.name = name;
-    }
+  public Touch(FileSystem fileSystem, String name) {
+    this.fileSystem = fileSystem;
+    this.name = name;
+  }
 
-    @Override
-    public String execute() {
-        new File(name, fileSystem.getCurrentDirectory());
-        return "'" + name + "' file created";
-    }
+  @Override
+  public String execute() {
+    new File(name, fileSystem.getCurrentDirectory());
+    return "'" + name + "' file created";
+  }
 }
