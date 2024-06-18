@@ -1,0 +1,62 @@
+@startuml
+class FileSystem {
+     Node root
+     Node cursor
+    + void executeCommand(String command)
+}
+
+FileSystem --> Command
+FileSystem -* Node
+
+interface Node {
+    + String getPath()
+}
+
+class File {
+    name
+    + String getPath()
+}
+
+Node <|.. File
+
+class Directory {
+    String name
+    Map<String, Node> children
+    + String getPath()
+    + void add(Node node)
+    + void remove(Node node)
+    + List<Node> getChildren()
+}
+
+Node --* Directory
+Node <|.. Directory
+
+interface Command {
+   + execute()
+}
+
+class DeleteFile implements Command {
+    + void execute()
+}
+
+class ChangeDirectory implements Command {
+    + void execute()
+}
+
+class CreateFile implements Command {
+    + void execute()
+}
+
+class CreateDirectory implements Command {
+    + void execute()
+}
+
+class List implements Command {
+    + void execute()
+}
+
+class RemoveDirectory implements Command {
+    + void execute()
+}
+
+@enduml
