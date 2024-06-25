@@ -3,11 +3,11 @@ package edu.austral.ingsis.clifford.System;
 import java.util.List;
 
 public interface FileSystem {
-    List<String> executeCommands(List<String> commands);
+  List<String> executeCommands(List<String> commands);
 
-    Directory getRoot();
+  Directory getRoot();
 
-    Directory getCurrentDirectory();
+  Directory getCurrentDirectory();
 
-    void setCurrentDirectory(Directory parent);
+  void setCurrentDirectory(Directory parent);
 }
